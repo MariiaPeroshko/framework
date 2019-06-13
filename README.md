@@ -59,19 +59,27 @@ The main advantages of IONDV.Framework are open source software in JavaScript an
 * possibility of arbitrary data display in portal forms
 * easy data integration with REST and SOAP 
 
-## Quick start with the repository
+## Quick start 
 
 You can get access to the already built applications deployed on Cloud servers or explore the different ways on the [IONDV.Framework site](https://iondv.com), for example:  
-* installer for windows operating system
-* archive with the already built application
+* gitclone with this repository
+* installer for linux operating system
 * docker-container with the already built application
+* archive with the already built application
 
-### System environment
+### Software requirements
 
 Install [Node.js](<https://nodejs.org/en/>) runtime and npm package manager to run the IONDV.Framework. Version 10.x.x.   
 
 Install and run the [MongoDB](https://www.mongodb.org/) DBMS to store the data. Version 3.6.  
 
+<details>
+  <summary> 
+    <h3> 
+      Gitclone with repository
+    </h3> 
+  </summary>
+  
 ### Global dependencies
 
 To build all components and libraries, you need to install the following components globally:
@@ -80,6 +88,7 @@ To build all components and libraries, you need to install the following compone
 * [Gulp](<http://gulpjs.com/>) installation package `npm install -g gulp@4.0`. `4.0` - supported version of `Gulp`
 * package manager of frontend libraries [Bower](<https://bower.io>) `npm install -g bower`
 
+  
 ### Core, modules and application
 
 The [IONDV. Develop-and-test](https://github.com/iondv/develop-and-test) is an example application.
@@ -164,6 +173,7 @@ Add admin rights to the user executing the `node bin\acl.js --u admin@local --ro
 Run the app, executing the `npm start` or `node bin/www` command. 
 
 Open this link `http://localhost:8888` in a browser and log in. `8888` —  is a port in the `server.ports` parameter.
+ </details>
 
 
 ### Docker
@@ -205,6 +215,40 @@ docker run -d -p 80:8888 --name dnt --link mongodb iondv/dnt
 
 Open `http://localhost/` in your browser.
 
+### Installer
+
+IONDV. Framework apps installer
+
+#### Usage:
+
+iondv-app [OPTION]... IONDV_APP_NAME_OR_GIT_URL'
+ Install IONDV. Framework application to current dirrectory and create docker image.
+
+Options:'
+  -d                          stop, remove runnig app docker container and image,
+                              create and run new once
+  -c [value]                  start cluster with [value] count
+  -r                          remove app folder, if they exist
+  -i                          import data
+  -y                          yes to all
+  -q                          quiet mode. Show only major and warn information
+  -l [value]                  mongodb docker name, for link with app docker container
+                              (also set mongo uri value to [value]:27017)
+  -k                          skip check
+  -s [value]                  script to run after install and before build app
+  -m [value]                  mongo uri, for example: mongodb:27017. Default localhost:27017
+
+Environment:
+  IONDVUrlGitFramework       URL for get framework, default: https://github.com/iondv/framework.git'
+  IONDVUrlGitModules         Base of URL for get modules, default https://github.com/iondv'
+  IONDVUrlGitApp             Base of URL for get app, default https://github.com/iondv'
+  IONDVUrlGitExtApp          Base of URL for get app extension, default https://github.com/iondv'
+Example. Install and start app khv-ticket-discount with link docker mongodb
+
+./iondv-app -d -l mongodb khv-ticket-discount
+Example: Install app with link to git and mongo uri'
+
+./iondv-app -m localhost:27017 https://git.iondv.ru/ION-METADATA/khv-svyaz-info.git'
 
 ## Documentation 
 
