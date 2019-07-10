@@ -37,6 +37,8 @@
 <h1 align="center"> <a href="https://www.iondv.com/"><img src="/docs/ru/images/iondv_readme1.png" alt="IONDV. Framework" align="center"></a>
 </h1>  
 
+<a href="https://www.youtube.com/watch?v=r7NjctIR9bA&feature=youtu.be" target="_blank"><img src="/docs/ru/images/iondv_readme1.png" height="350px" alt="" title=""></a>
+
 ## Description  
 
 **IONDV.Framework** - is a low-code framework for creating high-level web applications based on metadata. Moreover, the framework allows you to change functionality with the additional components, such as ready-made modules or your new ones. 
