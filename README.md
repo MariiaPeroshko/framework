@@ -37,7 +37,9 @@
 <h1 align="center"> <a href="https://www.iondv.com/"><img src="/docs/ru/images/iondv_readme1.png" alt="IONDV. Framework" align="center"></a>
 </h1>  
 
-<a href="https://www.youtube.com/watch?v=r7NjctIR9bA&feature=youtu.be" target="_blank"><img src="/docs/ru/images/iondv_readme1.png" height="350px" alt="" title=""></a>
+
+
+<a href="https://www.youtube.com/watch?v=r7NjctIR9bA&feature=youtu.be" target="_blank"><img src="/docs/ru/images/IONDV.Telecom_video.png" height="250px" alt="" title=""></a>
 
 ## Description  
 
